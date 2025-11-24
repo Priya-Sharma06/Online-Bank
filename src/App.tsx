@@ -18,6 +18,16 @@ import AdminManageKYC from "./pages/AdminManageKYC";
 import AdminManageTransactions from "./pages/AdminManageTransactions";
 import AdminManageBills from "./pages/AdminManageBills";
 import NotFound from "./pages/NotFound";
+import Notifications from "./pages/Notifications";
+import LoanDashboard from "./pages/LoanDashboard";
+import LoanApplication from "./pages/LoanApplication";
+import LoanDocuments from "./pages/LoanDocuments";
+import LoanStatus from "./pages/LoanStatus";
+import LoanEMI from "./pages/LoanEMI";
+import LoanRepayment from "./pages/LoanRepayment";
+import LoanPrepayment from "./pages/LoanPrepayment";
+import AdminLoanDashboard from "./pages/AdminLoanDashboard";
+import AdminLoanApplications from "./pages/AdminLoanApplications";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +52,16 @@ const App = () => (
           <Route path="/admin/kyc" element={<AdminManageKYC />} />
           <Route path="/admin/transactions" element={<AdminManageTransactions />} />
           <Route path="/admin/bills" element={<AdminManageBills />} />
+          <Route path="/admin/loan/dashboard" element={<AdminLoanDashboard />} />
+          <Route path="/admin/loan/applications" element={<AdminLoanApplications />} />
+          <Route path="/notifications" element={<Notifications />} />
+          <Route path="/loan/dashboard" element={<LoanDashboard />} />
+          <Route path="/loan/apply" element={<LoanApplication />} />
+          <Route path="/loan/documents" element={<LoanDocuments />} />
+          <Route path="/loan/status" element={<LoanStatus />} />
+          <Route path="/loan/emi-schedule" element={<LoanEMI />} />
+          <Route path="/loan/repayment" element={<LoanRepayment />} />
+          <Route path="/loan/prepayment" element={<LoanPrepayment />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
