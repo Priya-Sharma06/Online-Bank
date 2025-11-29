@@ -31,6 +31,10 @@ import AdminLoanApplications from "./pages/AdminLoanApplications";
 import ExpenseTracker from "./pages/ExpenseTracker";
 import BudgetPlanner from "./pages/BudgetPlanner";
 import SavingsGoals from "./pages/SavingsGoals";
+import ActivityLog from "./pages/ActivityLog";
+import AdminActivityLog from "./pages/AdminActivityLog";
+import TwoFactorAuth from "./pages/TwoFactorAuth";
+import RewardsOffers from "./pages/RewardsOffers";
 
 const queryClient = new QueryClient();
 
@@ -68,6 +72,10 @@ const App = () => (
           <Route path="/expense-tracker" element={<ExpenseTracker />} />
           <Route path="/budget-planner" element={<BudgetPlanner />} />
           <Route path="/savings-goals" element={<SavingsGoals />} />
+          <Route path="/activity-log" element={<ActivityLog />} />
+          <Route path="/admin/activity-log" element={<AdminActivityLog />} />
+          <Route path="/two-factor-auth" element={<TwoFactorAuth />} />
+          <Route path="/rewards" element={<RewardsOffers />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
