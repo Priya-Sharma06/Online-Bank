@@ -28,6 +28,9 @@ import LoanRepayment from "./pages/LoanRepayment";
 import LoanPrepayment from "./pages/LoanPrepayment";
 import AdminLoanDashboard from "./pages/AdminLoanDashboard";
 import AdminLoanApplications from "./pages/AdminLoanApplications";
+import ExpenseTracker from "./pages/ExpenseTracker";
+import BudgetPlanner from "./pages/BudgetPlanner";
+import SavingsGoals from "./pages/SavingsGoals";
 
 const queryClient = new QueryClient();
 
@@ -62,6 +65,9 @@ const App = () => (
           <Route path="/loan/emi-schedule" element={<LoanEMI />} />
           <Route path="/loan/repayment" element={<LoanRepayment />} />
           <Route path="/loan/prepayment" element={<LoanPrepayment />} />
+          <Route path="/expense-tracker" element={<ExpenseTracker />} />
+          <Route path="/budget-planner" element={<BudgetPlanner />} />
+          <Route path="/savings-goals" element={<SavingsGoals />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
