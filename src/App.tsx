@@ -35,6 +35,14 @@ import ActivityLog from "./pages/ActivityLog";
 import AdminActivityLog from "./pages/AdminActivityLog";
 import TwoFactorAuth from "./pages/TwoFactorAuth";
 import RewardsOffers from "./pages/RewardsOffers";
+import FDDashboard from "./pages/FDDashboard";
+import FDOpenNew from "./pages/FDOpenNew";
+import FDList from "./pages/FDList";
+import FDDetails from "./pages/FDDetails";
+import AdminFDDashboard from "./pages/AdminFDDashboard";
+import AdminFDRates from "./pages/AdminFDRates";
+import AdminFDRecords from "./pages/AdminFDRecords";
+import AdminFDAuditLogs from "./pages/AdminFDAuditLogs";
 
 const queryClient = new QueryClient();
 
@@ -76,6 +84,16 @@ const App = () => (
           <Route path="/admin/activity-log" element={<AdminActivityLog />} />
           <Route path="/two-factor-auth" element={<TwoFactorAuth />} />
           <Route path="/rewards" element={<RewardsOffers />} />
+          {/* Fixed Deposit Routes */}
+          <Route path="/fd/dashboard" element={<FDDashboard />} />
+          <Route path="/fd/open-new" element={<FDOpenNew />} />
+          <Route path="/fd/list" element={<FDList />} />
+          <Route path="/fd/details/:id" element={<FDDetails />} />
+          {/* Admin FD Routes */}
+          <Route path="/admin/fd/dashboard" element={<AdminFDDashboard />} />
+          <Route path="/admin/fd/rates" element={<AdminFDRates />} />
+          <Route path="/admin/fd/records" element={<AdminFDRecords />} />
+          <Route path="/admin/fd/audit-logs" element={<AdminFDAuditLogs />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

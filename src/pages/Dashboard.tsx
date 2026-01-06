@@ -12,6 +12,10 @@ import {
   HelpCircle,
   Eye,
   Zap,
+  PiggyBank,
+  Landmark,
+  TrendingUp,
+  Target,
 } from "lucide-react";
 
 const Dashboard = () => {
@@ -101,6 +105,53 @@ const Dashboard = () => {
                     <CreditCard className="w-6 h-6 text-white" />
                   </div>
                   <span className="font-medium">Virtual Card</span>
+                </div>
+              </Card>
+            </Link>
+          </div>
+
+          {/* Secondary Quick Actions */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <Link to="/fd/dashboard">
+              <Card className="p-6 hover-scale card-shadow cursor-pointer group border-primary/20">
+                <div className="flex flex-col items-center text-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <PiggyBank className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="font-medium">Fixed Deposits</span>
+                </div>
+              </Card>
+            </Link>
+
+            <Link to="/loan/dashboard">
+              <Card className="p-6 hover-scale card-shadow cursor-pointer group">
+                <div className="flex flex-col items-center text-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-blue-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Landmark className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="font-medium">Loans</span>
+                </div>
+              </Card>
+            </Link>
+
+            <Link to="/expense-tracker">
+              <Card className="p-6 hover-scale card-shadow cursor-pointer group">
+                <div className="flex flex-col items-center text-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-purple-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <TrendingUp className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="font-medium">Expenses</span>
+                </div>
+              </Card>
+            </Link>
+
+            <Link to="/savings-goals">
+              <Card className="p-6 hover-scale card-shadow cursor-pointer group">
+                <div className="flex flex-col items-center text-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-amber-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Target className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="font-medium">Savings Goals</span>
                 </div>
               </Card>
             </Link>
